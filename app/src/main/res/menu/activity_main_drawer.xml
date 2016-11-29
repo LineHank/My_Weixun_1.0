@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_menu_home"
+            android:icon="@mipmap/ic_extension_white_24dp"
+            android:title="主页"/>
+        <item
+            android:id="@+id/nav_menu_feedback"
+            android:icon="@mipmap/ic_more_horiz_white_24dp"
+            android:title="反馈"/>
+        <item
+            android:id="@+id/nav_menu_setting"
+            android:icon="@mipmap/ic_settings_white_24dp"
+            android:title="设置"/>
+        <item
+            android:id="@+id/nav_menu_about"
+            android:icon="@mipmap/ic_star_white_24dp"
+            android:title="关于"/>
+
+        <item
+            android:id="@+id/nav_menu_login"
+            android:icon="@mipmap/weixuntitle2"
+            android:title="登录"/>
+
+
+
+    </group>
+
+</menu>

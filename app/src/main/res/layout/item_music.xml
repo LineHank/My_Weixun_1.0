@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp">
+
+    <ImageView
+        android:id="@+id/music_image"
+        android:layout_width="95dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:layout_marginTop="3dp"
+        android:id="@+id/music_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/music_image"
+        android:layout_alignRight="@id/music_image"
+        android:layout_below="@id/music_image"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@android:color/black"
+        android:textSize="13sp"/>
+
+    <RatingBar
+        android:id="@+id/music_ratingbar"
+        android:layout_marginTop="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/music_title"
+        android:layout_below="@id/music_title"
+        android:isIndicator="true"
+        style="?android:attr/ratingBarStyleSmall"
+        android:max="255"
+        android:numStars="5"
+        android:progress="255"
+        android:stepSize="0.5"/>
+</RelativeLayout>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/include_title_bar"/>
+
+    <include
+        android:id="@+id/music_pager_loading"
+        layout="@layout/pager_loading"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_bar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/ll_music_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_music_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/music_image"
+                    android:layout_width="220dp"
+                    android:layout_height="270dp"
+                    android:layout_centerHorizontal="true"
+                    android:padding="10dp"
+                    android:scaleType="centerCrop"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/r2_music_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_music_container"
+                android:background="#f2efef"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp">
+
+                <TextView
+                    android:id="@+id/music_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/music_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/music_name"
+                    android:layout_below="@id/music_name"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/colorGray"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/music_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/music_name"
+                    android:layout_below="@id/music_style"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/colorGray"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/music_country"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/music_name"
+                    android:layout_below="@id/music_author"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/colorGray"
+                    android:textSize="14sp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/music_style"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="45dp"
+                    android:layout_marginEnd="45dp">
+
+                    <RatingBar
+                        android:id="@+id/music_ratingbar"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:max="10"
+                        android:numStars="5"
+                        android:progressTint="@color/colorAccent"/>
+
+                    <TextView
+                        android:id="@+id/music_hot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4.0dip"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnPlayUrl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="播放网络音频"></Button>
+
+                <Button
+                    android:id="@+id/btnPause"
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:text="暂停"></Button>
+
+                <Button
+                    android:id="@+id/btnStop"
+                    android:layout_width="80dip"
+                    android:layout_height="wrap_content"
+                    android:text="停止"></Button>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                android:orientation="horizontal">
+
+                <SeekBar
+                    android:id="@+id/skbProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.0"
+                    android:max="100"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"></SeekBar>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

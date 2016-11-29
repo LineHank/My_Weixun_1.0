@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.xulihao.my_weixun_10.activity.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorAccent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+            <RadioGroup
+                android:id="@+id/top_radiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/top_rb_music"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tab_music_selector"
+                    android:button="@null"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:id="@+id/top_rb_news"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tab_news_selector"
+                    android:button="@null"
+                    android:layout_marginLeft="15dp"/>
+                <RadioButton
+                    android:id="@+id/top_rb_movies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tab_movies_selector"
+                    android:button="@null"
+                    android:layout_marginLeft="15dp"/>
+                <RadioButton
+                    android:id="@+id/top_rb_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tab_message_selector"
+                    android:button="@null"
+                    android:layout_marginLeft="15dp"/>
+
+            </RadioGroup>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+    <com.xulihao.my_weixun_10.frgment.NoScrollViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    </com.xulihao.my_weixun_10.frgment.NoScrollViewPager>
+
+
+</android.support.design.widget.CoordinatorLayout>
